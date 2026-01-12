@@ -24,9 +24,9 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Theme color for browser chrome */}
         <meta name="theme-color" content="#0c4a6e" />
         
-        {/* Favicon - replace with actual favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
       </Head>
       <Component {...pageProps} />
     </>
