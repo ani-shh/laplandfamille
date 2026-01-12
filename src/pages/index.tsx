@@ -47,7 +47,7 @@ export default function Home() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Lapland Famille | Premium Lapland Holidays for Families & Couples 2025/2026</title>
+        <title>Lapland Famille | Premium Lapland Holidays for Families 2025/2026</title>
         <meta 
           name="description" 
           content="Experience magical family Lapland holidays in Finnish Lapland. Meet Santa, see the Northern Lights, and create unforgettable winter memories. ABTA & ATOL protected. Book your 2025/2026 Lapland holiday today." 
@@ -60,7 +60,7 @@ export default function Home() {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.laplandfamille.com/" />
-        <meta property="og:title" content="Lapland Famille | Premium Lapland Holidays for Families & Couples" />
+        <meta property="og:title" content="Lapland Famille | Premium Lapland Holidays for Families" />
         <meta property="og:description" content="Experience magical family Lapland holidays. Meet Santa, see Northern Lights, and create unforgettable memories. ABTA & ATOL protected." />
         <meta property="og:image" content="https://www.laplandfamille.com/og-image.jpg" />
         <meta property="og:locale" content="en_GB" />
@@ -69,7 +69,7 @@ export default function Home() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://www.laplandfamille.com/" />
-        <meta name="twitter:title" content="Lapland Famille | Premium Lapland Holidays for Families & Couples" />
+        <meta name="twitter:title" content="Lapland Famille | Premium Lapland Holidays for Families" />
         <meta name="twitter:description" content="Experience magical family Lapland holidays. Meet Santa, see Northern Lights, and create unforgettable memories." />
         <meta name="twitter:image" content="https://www.laplandfamille.com/twitter-image.jpg" />
 

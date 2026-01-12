@@ -95,8 +95,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight"
           >
             Premium Lapland Holidays for{' '}
-            <span className="text-aurora-400">Families</span> &{' '}
-            <span className="text-aurora-400">Couples</span>
+            <span className="text-aurora-400">Families</span>
           </motion.h1>
 
           {/* Subheadline */}

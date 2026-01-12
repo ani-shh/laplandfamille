@@ -15,7 +15,7 @@ interface PackagesProps {
  * Packages Section Component
  * 
  * Displays all available packages in a responsive grid with:
- * - Filter tabs (All, Families, Couples)
+ * - Filter tabs (All, By Duration)
  * - Package cards with full details
  * - Seasonal urgency messaging
  * 
@@ -24,19 +24,21 @@ interface PackagesProps {
  * - package_filter_change: When filter tab is changed
  */
 export default function Packages({ onBookPackage }: PackagesProps) {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'families' | 'couples'>('all')
+  const [activeFilter, setActiveFilter] = useState<'all' | 'short' | 'week'>('all')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const filters = [
     { id: 'all' as const, label: 'All Packages', count: packages.length },
-    { id: 'families' as const, label: 'For Families', count: packages.filter(p => p.idealFor.includes('families')).length },
-    { id: 'couples' as const, label: 'For Couples', count: packages.filter(p => p.idealFor.includes('couples')).length },
+    { id: 'short' as const, label: 'Short Breaks (2-4 nights)', count: packages.filter(p => p.durationNights <= 4).length },
+    { id: 'week' as const, label: 'Week Long', count: packages.filter(p => p.durationNights > 4).length },
   ]
 
   const filteredPackages = activeFilter === 'all'
     ? packages
-    : packages.filter(pkg => pkg.idealFor.includes(activeFilter))
+    : activeFilter === 'short'
+    ? packages.filter(pkg => pkg.durationNights <= 4)
+    : packages.filter(pkg => pkg.durationNights > 4)
 
   return (
     <section id="packages" className="section bg-snow-50" ref={ref}>
@@ -51,7 +53,7 @@ export default function Packages({ onBookPackage }: PackagesProps) {
           <span className="badge badge-warm mb-4">2025/2026 Season</span>
           <h2 className="mb-4">Our Lapland Holiday Packages</h2>
           <p className="text-lg text-snow-600 max-w-2xl mx-auto">
-            Choose from our carefully curated collection of family and couples packages. 
+            Choose from our carefully curated collection of family packages.
             Every trip includes unforgettable experiences, cozy accommodation, and magical memories.
           </p>
         </motion.div>

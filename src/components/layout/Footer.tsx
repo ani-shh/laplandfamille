@@ -28,9 +28,9 @@ export default function Footer({ onOpenBooking }: FooterProps) {
     ],
     packages: [
       { label: 'Family Holidays', href: '#packages' },
-      { label: 'Couples Retreats', href: '#packages' },
       { label: 'Santa Trips', href: '#packages' },
       { label: 'Aurora Holidays', href: '#packages' },
+      { label: 'Adventure Weeks', href: '#packages' },
     ],
     support: [
       { label: 'Contact Us', href: '#contact' },

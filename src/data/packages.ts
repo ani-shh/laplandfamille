@@ -15,7 +15,7 @@ export interface Package {
   description: string;
   duration: string;
   durationNights: number;
-  idealFor: ('families' | 'couples' | 'groups')[];
+  idealFor: ('families' | 'groups')[];
   accommodationType: string;
   accommodationDescription: string;
   activities: Activity[];
@@ -257,103 +257,6 @@ export const packages: Package[] = [
     new: false
   },
   {
-    id: 'romantic-aurora-retreat',
-    slug: 'romantic-aurora-retreat',
-    name: 'Romantic Aurora Retreat',
-    shortDescription: 'An intimate Lapland escape designed for couples',
-    description: 'Escape to the Arctic wilderness with your loved one for an unforgettable romantic getaway. Our couples package features luxury accommodation, private experiences, and the best chances to witness the magical Northern Lights. Perfect for honeymoons, anniversaries, or a special winter escape.',
-    duration: '5 days / 4 nights',
-    durationNights: 4,
-    idealFor: ['couples'],
-    accommodationType: 'Luxury Arctic Suite',
-    accommodationDescription: 'Exclusive suite with panoramic glass ceiling, private hot tub, and butler service. The ultimate romantic retreat under the Arctic sky.',
-    activities: [
-      {
-        name: 'Private Northern Lights Safari',
-        description: 'Exclusive aurora hunting with champagne in the wilderness',
-        duration: '4 hours',
-        included: true,
-        icon: 'aurora'
-      },
-      {
-        name: 'Couples Spa Experience',
-        description: 'Traditional Finnish sauna and ice swimming',
-        duration: '3 hours',
-        included: true,
-        icon: 'spa'
-      },
-      {
-        name: 'Private Husky Safari',
-        description: 'Just the two of you with your own husky team',
-        duration: '3 hours',
-        included: true,
-        icon: 'husky'
-      },
-      {
-        name: 'Gourmet Arctic Dinner',
-        description: 'Fine dining experience featuring local Lapland cuisine',
-        duration: '3 hours',
-        included: true,
-        icon: 'dining'
-      },
-      {
-        name: 'Snowshoe Romance Trek',
-        description: 'Guided snowshoe walk to a wilderness cabin',
-        duration: '2 hours',
-        included: true,
-        icon: 'snowshoe'
-      }
-    ],
-    difficulty: 'easy',
-    skiRequired: false,
-    price: {
-      adult: 2499,
-      child: 0,
-      infant: 0,
-      currency: 'GBP'
-    },
-    dates: {
-      available: ['Nov 2025', 'Dec 2025', 'Jan 2026', 'Feb 2026', 'Mar 2026'],
-      soldOut: ['Dec 24-28, 2025', 'Feb 14-18, 2026']
-    },
-    maxCapacity: 8,
-    spotsRemaining: 2,
-    highlights: [
-      'Private glass-roof suite',
-      'Outdoor hot tub under stars',
-      'Private experiences throughout',
-      'Gourmet dining included',
-      'Champagne aurora safari'
-    ],
-    includes: [
-      '4 nights luxury suite',
-      'Gourmet breakfast and dinner',
-      'All private experiences',
-      'Premium thermal wear',
-      'Private airport transfers',
-      'Personal concierge',
-      'Champagne on arrival'
-    ],
-    excludes: [
-      'International flights',
-      'Lunch',
-      'Additional spa treatments',
-      'Gratuities'
-    ],
-    images: {
-      hero: '/images/packages/romantic-aurora-hero.jpg',
-      gallery: [
-        '/images/packages/romantic-aurora-1.jpg',
-        '/images/packages/romantic-aurora-2.jpg',
-        '/images/packages/romantic-aurora-3.jpg'
-      ]
-    },
-    rating: 5.0,
-    reviewCount: 89,
-    featured: true,
-    new: true
-  },
-  {
     id: 'santa-express-weekend',
     slug: 'santa-express-weekend',
     name: 'Santa Express Weekend',
@@ -451,6 +354,6 @@ export const getFeaturedPackages = (): Package[] => {
   return packages.filter(pkg => pkg.featured);
 };
 
-export const getPackagesForIdealFor = (type: 'families' | 'couples' | 'groups'): Package[] => {
+export const getPackagesForIdealFor = (type: 'families' | 'groups'): Package[] => {
   return packages.filter(pkg => pkg.idealFor.includes(type));
 };

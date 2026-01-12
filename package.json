@@ -1,7 +1,7 @@
 {
   "name": "lapland-famille",
   "version": "1.0.0",
-  "description": "Premium Lapland Holidays for Families & Couples",
+  "description": "Premium Lapland Holidays for Families",
   "private": true,
   "scripts": {
     "dev": "next dev",
